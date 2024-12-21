@@ -136,32 +136,46 @@ void outputArray(int row, int col, int** arr)
         }
         cout << endl;
     }
+    cout << endl;
+    cout << endl;
+    cout << endl;
+
 }
 
 
-void swapArr(int row, int col, int** arr)
+//void swapArr(int row, int col, int** arr)
+//{
+//
+//    int** newArr = new int* [col];
+//
+//    for (int i = 0; i < col; i++) {
+//        newArr[i] = new int[row];
+//    }
+//
+//    for (int i = 0; i < row; i++) {
+//        for (int j = 0; j < col; j++) {
+//            newArr[j][i] = arr[i][j];
+//        }
+//    }
+//
+//    cout << endl;
+//
+//    outputArray(col, row, newArr);
+//
+//    for (int i = 0; i < col; i++) {
+//        delete[] newArr[i];
+//    }
+//    delete[] newArr;
+//}
+
+void outPutSwapArr(int row, int col, int** arr)
 {
-
-    int** newArr = new int* [col];
-
     for (int i = 0; i < col; i++) {
-        newArr[i] = new int[row];
-    }
-
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < col; j++) {
-            newArr[j][i] = arr[i][j];
+        for (int j = 0; j < row; j++) {
+            cout << setw(4) << arr[j][i];
         }
+        cout << endl;
     }
-
-    cout << endl;
-
-    outputArray(col, row, newArr);
-
-    for (int i = 0; i < col; i++) {
-        delete[] newArr[i];
-    }
-    delete[] newArr;
 }
 
 
@@ -177,7 +191,7 @@ int main()
     fullArray(row, col, pArr);
     outputArray(row, col, pArr);
 
-    swapArr(row, col, pArr);
+    outPutSwapArr(row, col, pArr);
 
 
 
